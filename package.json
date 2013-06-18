@@ -21,6 +21,6 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {
-    "sregex": "0.0.3"
+    "sregex": "*"
   }
 }

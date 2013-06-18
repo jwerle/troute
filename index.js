@@ -46,7 +46,7 @@ function troute (method, route, fn) {
  */
 
 troute.get = function (route, fn) {
-	rroute('GET', route, fn);
+	troute('GET', route, fn);
 };
 
 
@@ -59,7 +59,7 @@ troute.get = function (route, fn) {
  */
 
 troute.post = function (route, fn) {
-	rroute('POST', route, fn);
+	troute('POST', route, fn);
 };
 
 
@@ -72,7 +72,7 @@ troute.post = function (route, fn) {
  */
 
 troute.put = function (route, fn) {
-	rroute('PUT', route, fn);
+	troute('PUT', route, fn);
 };
 
 
@@ -86,7 +86,7 @@ troute.put = function (route, fn) {
 
 troute.del = 
 troute.delete = function (route, fn) {
-	rroute('DELETE', route, fn);
+	troute('DELETE', route, fn);
 };
 
 
@@ -99,7 +99,7 @@ troute.delete = function (route, fn) {
  */
 
 troute.head = function (route, fn) {
-	rroute('HEAD', route, fn);
+	troute('HEAD', route, fn);
 };
 
 
@@ -113,5 +113,5 @@ troute.head = function (route, fn) {
 
 troute.opts =
 troute.options = function (route, fn) {
-	rroute('OPTIONS', route, fn);
+	troute('OPTIONS', route, fn);
 };
