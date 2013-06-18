@@ -35,3 +35,83 @@ function troute (method, route, fn) {
 		else fn(req, res, next);
 	}
 }
+
+
+/**
+ * matches all `GET` requests
+ *
+ * @api public
+ * @param {String|RegExp} route
+ * @param {Function} fn
+ */
+
+troute.get = function (route, fn) {
+	rroute('GET', route, fn);
+};
+
+
+/**
+ * matches all `POST` requests
+ *
+ * @api public
+ * @param {String|RegExp} route
+ * @param {Function} fn
+ */
+
+troute.post = function (route, fn) {
+	rroute('POST', route, fn);
+};
+
+
+/**
+ * matches all `PUT` requests
+ *
+ * @api public
+ * @param {String|RegExp} route
+ * @param {Function} fn
+ */
+
+troute.put = function (route, fn) {
+	rroute('PUT', route, fn);
+};
+
+
+/**
+ * matches all `DELETE` requests
+ *
+ * @api public
+ * @param {String|RegExp} route
+ * @param {Function} fn
+ */
+
+troute.del = 
+troute.delete = function (route, fn) {
+	rroute('DELETE', route, fn);
+};
+
+
+/**
+ * matches all `HEAD` requests
+ *
+ * @api public
+ * @param {String|RegExp} route
+ * @param {Function} fn
+ */
+
+troute.head = function (route, fn) {
+	rroute('HEAD', route, fn);
+};
+
+
+/**
+ * matches all `OPTIONS` requests
+ *
+ * @api public
+ * @param {String|RegExp} route
+ * @param {Function} fn
+ */
+
+troute.opts =
+troute.options = function (route, fn) {
+	rroute('OPTIONS', route, fn);
+};

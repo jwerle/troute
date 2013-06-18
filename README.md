@@ -33,6 +33,85 @@ require('http').createServer(troute('GET', '/home', function (req, res) {
 })).listen(8000);
 ```
 
+### .get(route, fn)
+
+matches all `GET` requests
+
+* `route` - a string or `RegExp` for route matching
+* `fn` - a callback function when the route is matched
+
+***example***
+
+```js
+troute.get('/home', home);
+```
+
+### .post(route, fn)
+
+matches all `POST` requests
+
+* `route` - a string or `RegExp` for route matching
+* `fn` - a callback function when the route is matched
+
+***example***
+
+```js
+troute.post('/users', createUser);
+```
+
+### .put(route, fn)
+
+matches all `PUT` requests
+
+* `route` - a string or `RegExp` for route matching
+* `fn` - a callback function when the route is matched
+
+***example***
+
+```js
+troute.put('/videos/:id', editVideo);
+```
+
+
+### .del(route, fn)
+
+matches all `DELETE` requests
+
+* `route` - a string or `RegExp` for route matching
+* `fn` - a callback function when the route is matched
+
+***example***
+
+```js
+troute.del('/videos/:id', deleteVideo);
+```
+
+### .head(route, fn)
+
+matches all `HEAD` requests
+
+* `route` - a string or `RegExp` for route matching
+* `fn` - a callback function when the route is matched
+
+***example***
+
+```js
+troute.head('/resources', resourcesHead);
+```
+
+### .options(route, fn)
+
+matches all `OPTIONS` requests
+
+* `route` - a string or `RegExp` for route matching
+* `fn` - a callback function when the route is matched
+
+***example***
+
+```js
+troute.options('/videos', videosOptions);
+```
+
 ## license
 
 MIT
