@@ -6,7 +6,7 @@ super fast tiny router
 ## install
 
 ```js
-$ npm insall troute
+$ npm install troute
 ```
 
 ## usage
