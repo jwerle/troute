@@ -1,0 +1,26 @@
+{
+  "name": "troute",
+  "version": "0.0.1",
+  "description": "super fast tiny router",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jwerle/troute.git"
+  },
+  "keywords": [
+    "router",
+    "fast",
+    "tiny",
+    "small",
+    "simple"
+  ],
+  "author": "Joseph Werle <joseph.werle@gmail.com>",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "sregex": "0.0.2"
+  }
+}
