@@ -32,7 +32,8 @@ function troute (method, route, fn) {
 
 		if (method !== req.method.toLowerCase()) return next();
 		else if (!regex.test(req.url)) return next();
-		else fn(req, res, next);
+		req.params = regex.parse(req.url);
+		fn(req, res, next);
 	}
 }
 

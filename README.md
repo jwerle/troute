@@ -13,6 +13,20 @@ $ npm install troute
 
 using `troute` is super simple
 
+```js
+require('http').createServer(troute('GET', '/home', function (req, res) {
+  res.end('+1');
+})).listen(8000);
+```
+
+you can use variable assignment in your route and capture their values in the `req.params` object
+
+```js
+require('http').createServer(troute('GET', '/videos/:id', function (req, res) {
+	console.log(req.params.id); // '1234'
+})).listen(5000);
+```
+
 ## api
 
 ### troute(method, route, fn)
