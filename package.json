@@ -1,6 +1,6 @@
 {
   "name": "troute",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "super fast tiny router",
   "main": "index.js",
   "scripts": {
