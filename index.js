@@ -4,6 +4,7 @@
  */
 
 var sregex = require('sregex')
+  , url = require('url')
 
 
 /**
@@ -29,10 +30,11 @@ function troute (method, route, fn) {
 		// where a stack based http request
 		// api is not being used
 		next = ('function' === typeof next)? next : function () {};
+		var pathname = url.parse(req.url).pathname;
 
-		if (method !== req.method.toLowerCase()) return next();
-		else if (!regex.test(req.url)) return next();
-		req.params = regex.parse(req.url);
+		if ('*' != method && method !== req.method.toLowerCase()) return next();
+		else if (!regex.test(pathname)) return next();
+		req.params = regex.parse(pathname);
 		fn(req, res, next);
 	}
 }
